@@ -1,0 +1,18 @@
+:root {
+    --primary-bg-col-dark: hsl(207, 26%, 17%);
+    --secondary-bg-col-dark: hsl(209, 23%, 22%);
+    --primary-font-col-dark: white;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--primary-bg-col-dark);
+}
