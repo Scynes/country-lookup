@@ -16,3 +16,65 @@ html, body {
 body {
     background-color: var(--primary-bg-col-dark);
 }
+
+/* ---------- *
+ *   UTILITY  *
+ * ---------- */
+.width-full {
+    width: 100%;
+}
+
+.min-height-med {
+    min-height: 4rem;
+}
+
+.margin-left-med {
+    margin-left: 2rem;
+}
+
+.margin-right-med {
+    margin-right: 2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+/* ---------- *
+ *   COLORS   *
+ * ---------- */
+.primary-bg-col {
+    background-color: var(--primary-bg-col-dark);
+}
+
+.secondary-bg-col {
+    background-color: var(--secondary-bg-col-dark);
+}
+
+.primary-font-col {
+    color: var(--primary-font-col-dark);
+}
+
+/* --------------- *
+ *   APPLICATION   *
+ * --------------- */
+header {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.225);
+}
+
+#page-container {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+}

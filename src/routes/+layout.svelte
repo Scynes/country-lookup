@@ -5,8 +5,10 @@
 </script>
 
 <div id="page-container">
-    <header>
+    <header class="secondary-bg-col">
         <NavBar />
     </header>
-    <slot />
+    <main>
+        <slot />
+    </main>
 </div>
