@@ -24,16 +24,20 @@ body {
     width: 100%;
 }
 
+.height-full {
+    height: 100%;
+}
+
 .min-height-med {
     min-height: 4rem;
 }
 
 .margin-left-med {
-    margin-left: 2rem;
+    margin-left: 3rem;
 }
 
 .margin-right-med {
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
 
 .flex {
@@ -46,6 +50,18 @@ body {
 
 .flex.align-center {
     align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid.row-auto {
+    grid-template-rows: auto;
+}
+
+.gap-med {
+    gap: 2rem;
 }
 
 /* ---------- *
@@ -72,9 +88,32 @@ header {
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.225);
 }
 
+#results {
+    display: grid;
+    grid-template-columns: repeat(4, 12.5rem);
+    justify-content: center;
+    gap: 2rem;
+}
+
+#results > div:nth-child(1) {
+    grid-column: span 4;
+}
+
+#lookup-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-rows: auto 1fr;
+}
+
 #page-container {
     min-height: 100%;
     display: grid;
     grid-template-rows: auto 1fr;
-    gap: 1rem;
+    gap: 2rem;
+}
+
+.card {
+    height: 15rem;
+    width: 12.5rem;
+    background-color: var(--secondary-bg-col-dark);
 }
