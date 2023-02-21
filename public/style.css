@@ -28,6 +28,10 @@ body {
     height: 100%;
 }
 
+.width-3-rem {
+    width: 3rem;
+}
+
 .min-height-med {
     min-height: 4rem;
 }
@@ -48,6 +52,10 @@ body {
     justify-content: space-between;
 }
 
+.flex.justify-center {
+    justify-content: center;
+}
+
 .flex.align-center {
     align-items: center;
 }
@@ -66,6 +74,22 @@ body {
 
 .gap-med {
     gap: 2rem;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.border-radius-small {
+    border-radius: 0.3rem;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 /* ---------- *
@@ -96,6 +120,9 @@ input {
     min-height: 2.5rem;
     outline: none;
     border: none;
+}
+
+input:not([type="search"]) {
     border-radius: 0.3rem;
 }
 
@@ -119,6 +146,10 @@ input[type="search"] {
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 2rem;
+}
+
+.fa-magnifying-glass {
+
 }
 
 .card {
