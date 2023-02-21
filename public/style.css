@@ -220,6 +220,10 @@ p {
 
 @media (max-width: 480px) {
 
+    h1 {
+        font-size: 1.5rem;
+    }
+
     input[type="search"] {
         width: 100%;
     }
@@ -242,7 +246,7 @@ p {
         max-width: 100%;
     }
 
-    .flag {
+    .flag, .data {
         grid-column: span 2;
     }
 }

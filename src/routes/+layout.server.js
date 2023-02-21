@@ -1,3 +1,4 @@
+/** @type {import('./$types').PageLoad} */
 export const load = async ({ fetch }) => {
 
     const result = await fetch('https://restcountries.com/v2/all?fields=name,capital,region,flags,population');
@@ -15,6 +16,7 @@ export const load = async ({ fetch }) => {
     }
 
     return {
+        maxage: 3600,
         countries
     }
 }

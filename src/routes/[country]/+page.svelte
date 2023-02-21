@@ -1,4 +1,6 @@
 <script>
+    import { BackButton } from "@components/button";
+
     export let data;
     
     /**
@@ -9,7 +11,7 @@
 
 <div id="country-information">
     <div>
-        <button class="border-radius-small secondary-bg-col primary-font-col"><i class="fa-solid fa-arrow-left-long"></i>Back</button>
+        <BackButton />
     </div>
     <div class="flag">
         <img src={COUNTRY.flags.svg} alt="">
