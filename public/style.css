@@ -116,7 +116,19 @@ header {
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.225);
 }
 
-input {
+button {
+    cursor: pointer;
+    min-width: 9rem;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+input, button {
     min-height: 2.5rem;
     outline: none;
     border: none;
@@ -133,6 +145,17 @@ input[type="search"] {
 p {
     margin: 5px 0;
     font-size: 12px;
+}
+
+#country-information {
+    display: grid;
+    margin: 2rem 4rem;
+    gap: 4rem;
+    grid-template: auto 1fr / 1fr 1fr;
+}
+
+#country-information > div:nth-child(1) {
+    grid-column: span 2;
 }
 
 #lookup-container {
@@ -180,10 +203,30 @@ p {
     padding: 1rem;
 }
 
+.flag {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    max-width: 40rem;
+}
+
+.flag > img {
+    height: 100%;
+    width: 100%;
+}
+
+.fa-arrow-left-long {
+    margin-right: 1rem;
+}
+
 @media (max-width: 480px) {
 
     input[type="search"] {
         width: 100%;
+    }
+
+    #country-information {
+        margin: 0 2rem;
+        gap: 2rem;
     }
 
     #lookup-container {
@@ -197,5 +240,9 @@ p {
 
     .card  {
         max-width: 100%;
+    }
+
+    .flag {
+        grid-column: span 2;
     }
 }

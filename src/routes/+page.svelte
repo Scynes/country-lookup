@@ -13,7 +13,7 @@
         <input class="secondary-bg-col" type="text" placeholder="test">
     </div>
     {#each data.countries as country }
-        <a href="/test">
+        <a href="/{country.name.toLowerCase()}">
             <div class="card height-full overflow-hidden">
                 <div class="overflow-hidden">
                     <img src={country.flags.svg} alt="">
