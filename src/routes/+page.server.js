@@ -1,6 +1,6 @@
 export const load = async ({ fetch }) => {
 
-    const result = await fetch('https://restcountries.com/v2/all?fields=name,capital,currencies');
+    const result = await fetch('https://restcountries.com/v2/all?fields=name,capital,currencies,flags');
 
     const data = await result.json();
 

@@ -148,15 +148,19 @@ input[type="search"] {
     gap: 2rem;
 }
 
-.fa-magnifying-glass {
-
-}
-
 .card {
-    height: 17rem;
-    width: 15rem;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr;
+    max-height: 17rem;
+    max-width: 15rem;
     border-radius: 0.3rem;
     background-color: var(--secondary-bg-col-dark);
+}
+
+.card > div > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 @media (max-width: 480px) {

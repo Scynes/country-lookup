@@ -13,8 +13,11 @@
         <input class="secondary-bg-col" type="text" placeholder="test">
     </div>
     {#each data.countries as country }
-        <div class="card">
-            {country.name}
+        <div class="card overflow-hidden">
+            <div class="overflow-hidden">
+                <img src={country.flags.svg} alt="">
+            </div>
+            <h5>{country.name}</h5>
         </div>
     {/each}
 </div>
