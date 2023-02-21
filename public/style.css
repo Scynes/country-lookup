@@ -127,7 +127,7 @@ input:not([type="search"]) {
 }
 
 input[type="search"] {
-    width: 24.5rem;
+    width: 21.5rem;
 }
 
 p {
