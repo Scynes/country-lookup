@@ -1,12 +1,12 @@
 export const load = async ({ fetch }) => {
 
-    const result = await fetch('https://restcountries.com/v2/all?fields=name,capital,currencies,flags');
+    const result = await fetch('https://restcountries.com/v2/all?fields=name,capital,region,flags,population');
 
     const data = await result.json();
 
     const countries = [];
 
-    while (countries.length < 6) {
+    while (countries.length < 8) {
 
         const index = Math.floor(Math.random() * data.length);
 

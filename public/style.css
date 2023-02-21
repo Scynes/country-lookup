@@ -130,6 +130,11 @@ input[type="search"] {
     width: 24.5rem;
 }
 
+p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
 #lookup-container {
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -154,13 +159,25 @@ input[type="search"] {
     max-height: 17rem;
     max-width: 15rem;
     border-radius: 0.3rem;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
     background-color: var(--secondary-bg-col-dark);
+    transition: 0.25s;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.719);
+    transform: scale(1.1);
 }
 
 .card > div > img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.country-info {
+    padding: 1rem;
 }
 
 @media (max-width: 480px) {
@@ -179,6 +196,6 @@ input[type="search"] {
     }
 
     .card  {
-        width: 100%;
+        max-width: 100%;
     }
 }

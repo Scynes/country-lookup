@@ -17,7 +17,12 @@
             <div class="overflow-hidden">
                 <img src={country.flags.svg} alt="">
             </div>
-            <h5>{country.name}</h5>
+            <div class="country-info primary-font-col">
+                <h3>{country.name}</h3>
+                <p>Population: {country.population}</p>
+                <p>Capitol: {country.capital}</p>
+                <p>Region: {country.region}</p>
+            </div>
         </div>
     {/each}
 </div>
