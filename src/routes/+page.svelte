@@ -1,3 +1,7 @@
+<script>
+    export let data;
+</script>
+
 <div id="lookup-container">
     <div class="flex space-between wrap gap-med">
         <div class="flex border-radius-small overflow-hidden">
@@ -8,19 +12,9 @@
         </div>
         <input class="secondary-bg-col" type="text" placeholder="test">
     </div>
-    <div class="card">
-        test
-    </div>
-    <div class="card">
-        test
-    </div>
-    <div class="card">
-        test
-    </div>
-    <div class="card">
-        test
-    </div>
-    <div class="card">
-        test
-    </div>
+    {#each data.countries as country }
+        <div class="card">
+            {country.name}
+        </div>
+    {/each}
 </div>
