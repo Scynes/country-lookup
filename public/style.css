@@ -191,7 +191,7 @@ p {
 
 #lookup-container {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, minmax(auto, 15rem));
     justify-content: center;
     gap: 2rem;
 }

@@ -9,9 +9,16 @@
 
     let isMounted = false;
 
-    countries.set(data.countries)
+    $: {
+        $countries
+    }
 
     onMount(() => {
+        
+        if ($countries.length === 0) {
+            countries.set(data.countries)
+        }
+        
         isMounted = true;
     });
 </script>
@@ -22,9 +29,9 @@
         <input class="secondary-bg-col" type="text" placeholder="test">
     </div>
     {#if isMounted}
-        {#each $countries as country, index}
+        {#each $countries as country, index (country.name)}
             <a href="/{country.name.toLowerCase()}">
-                <div class="card height-full overflow-hidden" in:scale={{delay: 100 * index}}>
+                <div class="card height-full overflow-hidden" in:scale={{delay: 100 * $countries.indexOf(country)}}>
                     <div class="overflow-hidden">
                         <img src={country.flags.svg} alt="">
                     </div>
