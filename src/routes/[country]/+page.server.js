@@ -6,11 +6,13 @@ const FIELDS = [
     'population',
     'nativeName',
     'region',
+    'subregion',
     'capital',
     'topLevelDomain',
     'currencies',
     'languages',
-    'flags'
+    'flags',
+    'borders'
 ]
 
 export const load = async ({ params, fetch }) => {
@@ -19,7 +21,28 @@ export const load = async ({ params, fetch }) => {
 
     const country = await result.json();
 
+    const BORDER_COUNTRIES = []
+
+    if (country[0].borders !== undefined) {
+
+        const getBorderCountries = await fetch(`https://restcountries.com/v2/alpha?codes=${country[0].borders}&fields=name,flags`);
+        const borderCountries = await getBorderCountries.json();
+
+        for (let country of borderCountries) {
+
+            const formattedName = country.name.split(/[ ,]/)[0];
+
+            const BORDER_COUNTRY = {
+                name: formattedName,
+                flag: country.flags.svg
+            }
+
+            BORDER_COUNTRIES.push(BORDER_COUNTRY);
+        }
+    }
+
     return {
-        country: country[0]
+        country: country[0],
+        borders: BORDER_COUNTRIES
     }
 }

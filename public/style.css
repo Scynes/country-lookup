@@ -72,6 +72,18 @@ body {
     grid-template-rows: auto;
 }
 
+.grid.two-cols {
+    grid-template-columns: 1fr 1fr;
+}
+
+.span-two-cols {
+    grid-column: span 2;
+}
+
+.gap-small {
+    gap: 0.25rem;
+}
+
 .gap-med {
     gap: 2rem;
 }
@@ -90,6 +102,10 @@ body {
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+.inline-block {
+    display: inline-block;
 }
 
 /* ---------- *
@@ -158,6 +174,12 @@ p {
     grid-column: span 2;
 }
 
+#data {
+    display: grid;
+    gap: 1.5rem;
+    grid-template: auto 1fr auto / 1fr 1fr;
+}
+
 #lookup-container {
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -203,10 +225,22 @@ p {
     padding: 1rem;
 }
 
+.label {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background: var(--secondary-bg-col-dark);
+}
+
+.label-img {
+    max-width: 15px;
+}
+
 .flag {
     overflow: hidden;
     border-radius: 0.5rem;
     max-width: 40rem;
+    max-height: 30rem;
 }
 
 .flag > img {
@@ -230,7 +264,7 @@ p {
 
     #country-information {
         margin: 0 2rem;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     #lookup-container {
@@ -242,11 +276,16 @@ p {
         grid-column: span 1;
     }
 
+    #data {
+        gap: 1rem;
+        grid-template-rows: auto;
+    }
+
     .card  {
         max-width: 100%;
     }
 
-    .flag, .data {
+    .flag, #data {
         grid-column: span 2;
     }
 }
