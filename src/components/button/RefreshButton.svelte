@@ -45,6 +45,10 @@
     input[type="number"] {
         width: 100%;
     }
+
+    input[type="number"]:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
 </style>
 
 <div id="refresh-container" class="flex gap-small width-full">

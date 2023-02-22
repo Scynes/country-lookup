@@ -163,13 +163,17 @@ header {
 button {
     cursor: pointer;
     min-width: 9rem;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
     transition: 0.3s;
 }
 
-button:hover {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+button:hover:not(:active) {
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
+}
+
+button:active {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
 }
 
 input {
@@ -204,6 +208,10 @@ p {
 
 #country-information > div:nth-child(1) {
     grid-column: span 2;
+}
+
+#country-search:focus-within {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 #data {
