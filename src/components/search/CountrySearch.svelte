@@ -31,7 +31,7 @@
 
 </script>
 
-<div class="flex border-radius-small overflow-hidden">
+<div id="country-search" class="flex border-radius-small overflow-hidden">
     <div class="flex justify-center align-center height-full width-3-rem secondary-bg-col">
         <i class="fa-solid fa-magnifying-glass primary-font-col"></i>
     </div>

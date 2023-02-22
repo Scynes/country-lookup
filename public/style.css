@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;500&display=swap');
+
 :root {
     --primary-bg-col-dark: hsl(207, 26%, 17%);
     --secondary-bg-col-dark: hsl(209, 23%, 22%);
     --primary-font-col-dark: white;
+    --primary-font: 'Bai Jamjuree', sans-serif;
+    --font-heavy: 500;
+    --font-light: 300;
 }
 
 * {
@@ -135,6 +140,12 @@ a {
     color: white;
 }
 
+h1 {
+    font-size: 2.5rem;
+    font-weight: var(--font-heavy);
+    font-family: var(--primary-font);
+}
+
 header {
     position: sticky;
     top: 0;
@@ -266,6 +277,10 @@ p {
     max-height: 30rem;
 }
 
+.refresh {
+    min-width: 5rem;
+}
+
 .flag > img {
     height: 100%;
     width: 100%;
@@ -292,6 +307,10 @@ p {
     #country-information {
         margin: 0 2rem;
         gap: 1rem;
+    }
+
+    #country-search {
+        width: 100%;
     }
 
     #lookup-container {

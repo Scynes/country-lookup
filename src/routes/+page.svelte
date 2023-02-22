@@ -26,7 +26,10 @@
 <div id="lookup-container">
     <div class="flex space-between wrap gap-med">
         <CountrySearch />
-        <input class="secondary-bg-col" type="text" placeholder="test">
+        <div class="flex gap-small">
+            <button class="refresh border-radius-small secondary-bg-col primary-font-col"><i class="fa-solid fa-arrows-rotate"></i>Discover</button>
+            <input class="secondary-bg-col" type="text" placeholder="test">
+        </div>
     </div>
     {#if isMounted}
         {#each $countries as country, index (country.name)}
