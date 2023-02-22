@@ -239,7 +239,12 @@ p {
     gap: 1rem;
     overflow: hidden;
     border-radius: 0.25rem;
+    transition: 0.3s;
     background: var(--secondary-bg-col-dark);
+}
+
+.label:hover {
+    transform: scale(1.05);
 }
 
 .label > h4 {

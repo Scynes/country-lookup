@@ -1,6 +1,8 @@
 <script>
     import { BackButton } from "@components/button";
 
+    import { fade } from 'svelte/transition';
+
     export let data;
     
     /**
@@ -12,7 +14,7 @@
 
 </script>
 
-<div id="country-information">
+<div id="country-information" in:fade={{ delay: 100, duration: 400 }}>
     <div>
         <BackButton />
     </div>
