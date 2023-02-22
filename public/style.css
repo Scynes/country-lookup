@@ -37,6 +37,10 @@ body {
     width: 3rem;
 }
 
+.width-auto {
+    width: auto;
+}
+
 .min-height-med {
     min-height: 4rem;
 }
@@ -117,6 +121,10 @@ body {
     display: inline-block;
 }
 
+.text-center {
+    text-align: center;
+}
+
 /* ---------- *
  *   COLORS   *
  * ---------- */
@@ -162,6 +170,10 @@ button {
 button:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
+}
+
+input {
+    width: 100%;
 }
 
 input, button {
@@ -216,6 +228,10 @@ p {
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 2rem;
+}
+
+#refresh-container {
+    max-width: 15rem;
 }
 
 .card {
@@ -277,10 +293,6 @@ p {
     max-height: 30rem;
 }
 
-.refresh {
-    min-width: 5rem;
-}
-
 .flag > img {
     height: 100%;
     width: 100%;
@@ -327,6 +339,10 @@ p {
         grid-template-rows: auto;
     }
 
+    #refresh-container {
+        max-width: 100%;
+    }
+
     .label-img {
         max-width: 2rem;
         max-height: 1.5rem;
@@ -342,5 +358,9 @@ p {
 
     .margin-top-bottom-med {
         margin: 0.5rem 0;
+    }
+
+    .refresh {
+        min-width: 80%;
     }
 }
