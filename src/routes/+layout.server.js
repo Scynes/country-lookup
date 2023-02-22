@@ -4,18 +4,17 @@ export const load = async ({ fetch }) => {
 
     const data = await result.json();
 
-    const countries = [];
+    const COUNTRIES = [];
 
-    while (countries.length < 8) {
+    while (COUNTRIES.length < 8) {
 
         const index = Math.floor(Math.random() * data.length);
 
-        if (!countries.includes(data[index])) 
-            countries.push(data[index]);
+        if (!COUNTRIES.includes(data[index])) 
+            COUNTRIES.push(data[index]);
     }
 
     return {
-        maxage: 3600,
-        countries
+        countries: COUNTRIES
     }
 }

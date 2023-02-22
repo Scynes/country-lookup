@@ -2,11 +2,15 @@
     import { scale } from 'svelte/transition'
     import { onMount } from 'svelte';
 
+    import { countries } from '@stores/countries';
+
     export let data;
 
     let isMounted = false;
 
-    let searchInput = '';
+    let searchInput = ''; 
+
+    countries.set(data.countries)
 
     onMount(() => {
         isMounted = true;
@@ -25,7 +29,7 @@
         <input class="secondary-bg-col" type="text" placeholder="test">
     </div>
     {#if isMounted}
-        {#each data.countries as country, index}
+        {#each $countries as country, index}
             <a href="/{country.name.toLowerCase()}">
                 <div class="card height-full overflow-hidden" in:scale={{delay: 100 * index}}>
                     <div class="overflow-hidden">
