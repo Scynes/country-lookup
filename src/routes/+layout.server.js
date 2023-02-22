@@ -1,4 +1,5 @@
-/** @type {import('./$types').PageLoad} */
+import { tick } from 'svelte';
+
 export const load = async ({ fetch }) => {
 
     const result = await fetch('https://restcountries.com/v2/all?fields=name,capital,region,flags,population');
@@ -14,6 +15,8 @@ export const load = async ({ fetch }) => {
         if (!countries.includes(data[index])) 
             countries.push(data[index]);
     }
+
+    await tick();
 
     return {
         maxage: 3600,
