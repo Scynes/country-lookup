@@ -35,13 +35,18 @@
             <p>Primary Currency: {COUNTRY.currencies[0].name} ({COUNTRY.currencies[0].code})</p>
             <p>Languages: {#each COUNTRY.languages as language} {language.name} {/each}</p>
         </div>
-        <div class="flex wrap gap-small span-two-cols">
-            {#each BORDERS as border}
-                <div class="label">
-                    <img class="label-img" src={border.flag} alt="">
-                    <h4>{border.name}</h4>
-                </div>
-            {/each}
+        <div class="span-two-cols">
+            <h2 class="margin-top-bottom-med">Border Countries:</h2>
+            <div class="flex wrap gap-small">
+                {#each BORDERS as border}
+                <a href="/{border.name}">
+                    <div class="label">
+                        <img class="label-img" src={border.flag} alt="">
+                        <h4>{border.name}</h4>
+                    </div>
+                </a>
+                {/each}
+            </div>
         </div>
     </div>
 </div>
