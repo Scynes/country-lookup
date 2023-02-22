@@ -1,23 +1,27 @@
 <script>
+    import { debounce } from 'lodash';
+
     import { countries } from "@stores/countries";
 
     let input = '';
 
-    const handleSearch = async input => {
-
-        if (input.length < 3) return;
-
+    const debouncedAPICall = debounce(async (input) => {
+        console.log('hello')
         const result = await fetch(`https://restcountries.com/v2/name/${input.toLowerCase()}?fields=name,capital,region,flags,population`);
 
         if (result.ok) {
 
             const data = await result.json();
-
-            console.log(data);
             
-            countries.set(data)
+            countries.set(data);
         }
+    }, 500);
 
+    const handleSearch = async input => {
+
+        if (input.length < 3) return;
+
+        debouncedAPICall(input);
     }
 
     $: handleSearch(input);
