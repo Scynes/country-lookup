@@ -30,7 +30,7 @@ export const load = async ({ params, fetch }) => {
 
         for (let country of borderCountries) {
 
-            const formattedName = country.name.split(/[ ,]/)[0];
+            const formattedName = country.name.split(/[(,]/)[0];
 
             const BORDER_COUNTRY = {
                 name: formattedName,

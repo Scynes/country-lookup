@@ -37,7 +37,10 @@
         </div>
         <div class="flex wrap gap-small span-two-cols">
             {#each BORDERS as border}
-                <div class="label"><img class="label-img" src={border.flag} alt="">{border.name}</div>
+                <div class="label">
+                    <img class="label-img" src={border.flag} alt="">
+                    <h4>{border.name}</h4>
+                </div>
             {/each}
         </div>
     </div>
